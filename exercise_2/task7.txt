@@ -1,0 +1,15 @@
+Explain the difference bitween INNER JOIN, LEFT (OUTER) JOIN and RIGHT (OUTER) JOIN.
+A JOIN is to produce a results table which combines rows from two or more tables, based on a related column between them. 
+In this example Table A and Table B.
+
+An INNER JOIN selects rows which have matching values in both tables and only returns a row as long as there is a match in both Table A and Table B. 
+If for example a Table A cell has a value and the corresponding Table B cell has a null value then the row will not be returned.
+
+LEFT (OUTER) JOIN returns all records from the left table (Table A) and the matching records from the right table (Table B). 
+Values which don’t have matching counterpart in Table B will be NULL. 
+
+RIGHT (OUTER) JOIN returns all records from the right table (Table B)and the matching records from the right table (Table A). 
+Values which don’t have matching counterpart in Table A will be NULL.
+
+
+
