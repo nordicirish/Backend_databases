@@ -1,0 +1,21 @@
+Explain what is special about the database user root. Why root user should always have a strong password?
+Why remote login should always be disabled for root user?
+Explain how to disable remote login from root user.
+
+The root account is a superuser account that has all the privileges possible in a database. 
+They can add, modify, delete or copy anything in a database. 
+Therefore it's most important to restrict access to the root account and protect it with a really strong password to prevent 
+a hacker accessing the account and getting unlimited access to the data. It's also best practice to only use the root role for 
+developing or maintaining a database but not to allow applications that access the database to have root access so remote login 
+for the root user should always be disabled.
+
+To disable remote root access run:
+
+DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
+FLUSH PRIVILEGES;
+
+
+
+
+
+
